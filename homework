@@ -1,0 +1,78 @@
+#include <iostream>
+#include <vector>
+enum marride
+{
+    ONE,
+    TWO,
+    TREE,
+    FOUR,
+    FIFE,
+};
+typedef struct
+{
+    std::string name;
+    std::string surname;
+    std::string patronymic;
+    int age;
+    date Birth;
+    emal mail;
+    bool maride
+    std::string country;
+    bool married;
+} client;
+typedef struct
+{
+   int house number;
+   std::string street;
+   int apartment number;
+   long int zip code;
+   std::string city;
+   std::string country;
+
+} adres;
+typedef struct
+{
+    int quantity;
+    std::currency;
+
+} money;
+typedef struct
+{
+    int value;
+    int annual percentage;
+
+} credit;
+int main()
+{
+
+
+    return 0;
+}
+void menu()
+{
+    std::cout << "Hello, friend.  " << std::endl;
+    std::cout << "\t1. Print clienter\n";
+    std::cout << "\t2. Add clienter\n";
+    std::cout << "\t\t 1. new clienter\n";
+    std::cout << "\t\t 2. clienter info\n";
+    std::cout << "\t 3. Remove clienter\n";
+    std::cout << "\t4. clienter info\n";
+}
+int indexclienter++;
+void addclient()
+{
+    indexklienter++;
+    std::cout << "Enter the Name client" << endl;
+    std::cin >> client.name;
+    std::cout << "Enter the Surame client" << endl;
+    std::cin >> client.surname;
+    std::cout << "Enter the patronymic client" << endl;
+    std::cin >> client.patronymic;
+    std::cout << "Enter the age client" << endl;
+    std::cin >> client.age;
+    std::cout << "Enter the Birth client" << endl;
+    std::cin >> client.Birth;
+    std::cout << "Enter the mail client" << endl;
+    std::cin >> client.mail;
+    std::vector<std::string> indexclienter = {client};
+}
