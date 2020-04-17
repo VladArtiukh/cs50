@@ -1,0 +1,134 @@
+#include<iostream>
+#include<vector>
+using namespace std;
+enum childrens {
+ ZERO,
+ ONE,
+ TWO,
+ TREE,
+ FOUR,
+ };
+
+typedef struct {
+    int day;
+    int month;
+    int year;
+} date;
+typedef struct {
+    string post;
+} e_mail;
+
+typedef struct {
+    int home_number;
+    string street;
+    int flat_number;
+    int post_index;
+    string city;
+    string country;
+} adress;
+typedef struct {
+int amounte;
+char valute;
+} money;
+typedef struct {
+    int value;
+    int persent;
+} credit;
+
+
+typedef struct
+{ string name;
+ string surname;
+ string petronimik;
+ int age;
+ date date_of_birth;
+ e_mail mail;
+ vector<string> property;
+ bool married;
+ int child;
+ adress c_address;
+ money c_money;
+ credit c_credit;
+ double cred;
+}bank_data;
+
+void selection(vector<auto>&vec);
+void print_clienter_menu();
+void addClient(vector<auto>&vec);
+void printfunk(vector<auto>&vec,int counter);
+
+int main() {
+    bank_data person;
+
+    cout<<"Enter your credit value: ";
+    cin>>person.c_credit.value;
+
+    cout<<"Enter your credit precent: ";
+    cin>>person.c_credit.persent;
+
+    person.cred=(person.c_credit.value+person.c_credit.value*person.c_credit.persent)/12;
+    cout<<"You need pay each month: "<<person.cred<<endl;
+    vector<bank_data>clients;
+
+
+    selection(clients);
+    return 0;
+}
+ void addClient(vector<auto>&vec)
+ {
+  bank_data new_person;
+  cout<<"Enter the name: ";
+  cin>>new_person.name;
+  cout<<"Enter the surname: ";
+  cin>>new_person.surname;
+  cout<<"Enter the petronimik: ";
+  cin>>new_person.petronimik;
+  cout<<"Enter the age: ";
+  cin>>new_person.age;
+  cout<<"Enter the date of birth: "<<endl;
+  cin>>new_person.date_of_birth.year;
+  cout<<"Enter the email: "<<endl;
+  cin>>new_person.mail.post;
+  cout<<"Enter your status: ";
+  cin>>new_person.married;
+
+  vec.push_back(new_person);
+ }
+void printfunk(vector<auto>&vec, int counter)
+{
+ cout<<"client data: "<<endl;
+ cout<<vec[counter].name<<endl;
+ cout<<vec[counter].surname<<endl;
+ cout<<vec[counter].age<<endl;
+ cout<<vec[counter].date_of_birth.day << "." << vec[counter].date_of_birth.month <<endl;
+ cout<<vec[counter].married<<endl;
+}
+
+void print_clienter_menu()
+{
+    cout<<"clienter menu:"<<endl;
+    cout<<"1 Add client"<<endl;
+    cout<<"2 Infor client"<<endl;
+}
+
+void selection(vector<auto>&vec) {
+    int selection=0;
+    int numer = 0;
+    cout << "Enter count: ";
+    cin >> numer;
+    print_clienter_menu();
+
+    cout<<"Enter number of your choice: ";
+    cin>>selection;
+
+switch(selection){
+    case 1:
+    addClient(vec);
+    break;
+    case 2:
+    printfunk(vec, numer);
+    break;
+    default:
+    print_clienter_menu();
+    }
+}
