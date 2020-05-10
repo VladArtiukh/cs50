@@ -1,0 +1,29 @@
+#include<iostream>
+
+using namespace std;
+class Factorial
+{
+public:
+long double factorial(int N)
+{
+    if(N < 0)
+        return 0;
+        if (N == 0)
+        return 1;
+    else
+        return N * factorial(N - 1);
+}
+int print()
+{
+    int N;
+    setlocale(0,"");
+    cout << "Enter number factorial: ";
+    cin >> N;
+    cout << "factorial for " << N << " = " << factorial(N) << endl;
+}
+};
+int main(){
+  Factorial n1;
+	n1.print();
+    return 0;
+}
