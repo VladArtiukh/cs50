@@ -1,0 +1,22 @@
+#include<iostream>
+
+using namespace std;
+class Counters
+{
+public:
+  int n = 0;
+  int task1(){
+    cout << "Enter number: ";
+    cin >> n;
+        for(int i = 1; i<=n; i++)
+        {
+        cout << i << " ";
+        }
+        cout << " " << endl;
+  }
+};
+int main(){
+    Counters n1;
+	n1.task1();
+    return 0;
+}
