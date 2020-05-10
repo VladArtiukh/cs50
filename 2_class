@@ -1,0 +1,39 @@
+#include<iostream>
+
+using namespace std;
+class Counters
+{
+public:
+    int A = 0;
+    int B = 0;
+
+    int task2(){
+    cout << "Enter A: ";
+    cin >> A;
+    cout << "Enter B: ";
+    cin >> B;
+
+    if(A < B)
+    {
+        for(int i = A; i<=B; i++)
+        {
+        cout << i << " ";
+        }
+    }
+
+    if(A > B)
+    {
+    for(int i = A; i>=B; i--)
+        {
+        cout << i << " ";
+        }
+    }
+    cout << " " << endl;
+
+}
+};
+int main(){
+    Counters n1;
+	n1.task2();
+    return 0;
+}
